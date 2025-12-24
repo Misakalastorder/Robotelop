@@ -1,0 +1,32 @@
+DATASET:
+  TEST:
+    SOURCE_NAME: "SignDataset"
+    SOURCE_PATH: "./data/source/sign-all/test"
+    TARGET_NAME: "YumiDataset"
+    TARGET_PATH: "./data/target/ur3"
+MODEL:
+  NAME: "ArmNet"
+  CHECKPOINT: "./saved/models/arm/best_model_epoch_0008.pth"
+HYPER:
+  EPOCHS: 0
+  BATCH_SIZE: 16
+  LEARNING_RATE: 0.0001
+LOSS:
+  EE: True
+  VEC: True
+  ORI: True
+  COL: True
+  COL_THRESHOLD: 0.15
+  REG: True
+INFERENCE:
+  MOTION:
+    SOURCE: './data/source/sign-all/test/h5/test_selected_1_1800.h5'
+    KEY: '测试-ceshi'
+  H5:
+    BOOL: True
+    PATH: './saved/h5'
+OTHERS:
+  SAVE: "./saved/models/arm"
+  LOG: "./saved/log"
+  SUMMARY: "./saved/runs"
+  LOG_INTERVAL: 100

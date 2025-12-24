@@ -1,0 +1,47 @@
+DATASET:
+  TEST:
+    SOURCE_NAME: "SignAll"
+    SOURCE_PATH: "./data/source/sign-all/test"
+    TARGET_NAME: "YumiAll"
+    TARGET_PATH: "./data/target/ur3"
+MODEL:
+  NAME: "YumiNet"
+  CHECKPOINT: "./saved/models/yumi/现实修改后.pth"
+  # CHECKPOINT: "./saved/models/7400帧训练/best_model_epoch_0009.pth"
+HYPER:
+  EPOCHS: 300
+  BATCH_SIZE: 12
+  LEARNING_RATE: 0.00001
+LOSS:
+  EE: True
+  VEC: True
+  ORI: True
+  FIN: True
+  COL: True
+  COL_THRESHOLD: 0.15
+  REG: True
+  EL: False
+INFERENCE:
+  MOTION:
+    # SOURCE: 'data/source/sign-all/train/h5/banliyewu_YuMi.h5'
+    # SOURCE: 'data\source\sign-all\train\h5\train.h5'
+    SOURCE: 'data\source\infer\demo_addvec.h5'
+    # SOURCE: '数据备份\自录\test.h5'
+    # KEY: '什么-shenme'
+    # KEY: '环境-huanjing'
+    # KEY: '销售-xiaoshou'
+    # KEY: '时尚-shishang'
+    # KEY: '商业-shangye'
+    # KEY: '美食-meishi'
+    # KEY: '行政-xingzheng'
+    # KEY: '画图-huatu'
+    KEY: '测试-ceshif'
+    # KEY: '数字'
+
+  H5:
+    BOOL: True
+    PATH: './saved/h5'
+OTHERS:
+  LOG: "./saved/log/yumi"
+  SUMMARY: "./saved/runs/yumi"
+  LOG_INTERVAL: 100
