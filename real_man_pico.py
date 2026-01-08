@@ -74,7 +74,7 @@ def run_data_tests(robotic_data):
     12: Neck, 13: Left Collar, 14: Right Collar, 15: Head, 16: Left Shoulder, 17: Right Shoulder
     18: Left Elbow, 19: Right Elbow, 20: Left Wrist, 21: Right Wrist, 22: Left Hand, 23: Right Hand,24:timestamp
     '''
-    save=False
+    save=True
     filename='operating.h5'
     frame_num = 0
     print("Starting Python binding test...")
@@ -596,21 +596,21 @@ def simulation_process(robotic_data):
                     observation, reward, done, info = env.step(action)
                     
                     # # 处理键盘输入来控制相机视角
-                    # keys = p.getKeyboardEvents()
-                    # for k, v in keys.items():
-                    #     if v & p.KEY_WAS_TRIGGERED:
-                    #         if k == ord('w'):
-                    #             camera_distance -= 0.3
-                    #         elif k == ord('s'):
-                    #             camera_distance += 0.3
-                    #         elif k == ord('a'):
-                    #             camera_yaw -= 10
-                    #         elif k == ord('d'):
-                    #             camera_yaw += 10
-                    #         elif k == ord('q'):
-                    #             camera_pitch -= 10
-                    #         elif k == ord('e'):
-                    #             camera_pitch += 10
+                    keys = p.getKeyboardEvents()
+                    for k, v in keys.items():
+                        if v & p.KEY_WAS_TRIGGERED:
+                            if k == ord('w'):
+                                camera_distance -= 0.3
+                            elif k == ord('s'):
+                                camera_distance += 0.3
+                            elif k == ord('a'):
+                                camera_yaw -= 10
+                            elif k == ord('d'):
+                                camera_yaw += 10
+                            elif k == ord('q'):
+                                camera_pitch -= 10
+                            elif k == ord('e'):
+                                camera_pitch += 10
                     #         elif k == ord('j'):
                     #             camera_target_position[0] -= 0.3
                     #         elif k == ord('l'):
@@ -620,9 +620,9 @@ def simulation_process(robotic_data):
                     #         elif k == ord('k'):
                     #             camera_target_position[1] -= 0.3
                     #         elif k == ord('u'):
-                    #             camera_target_position[2] += 0.3
-                    #         elif k == ord('o'):
-                    #             camera_target_position[2] -= 0.3
+                                # camera_target_position[2] += 0.3
+                            # elif k == ord('o'):
+                                # camera_target_position[2] -= 0.3
                     
                     time.sleep(0.001)  # 控制仿真速度
                     

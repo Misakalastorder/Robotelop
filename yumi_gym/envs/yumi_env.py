@@ -11,7 +11,8 @@ data_path = pybullet_data.getDataPath()
 # D:\2025\crp\yushu_robot\yushu_robot\h1_description
 # D:\2025\crp\yushu_robot\h1_description\urdf\h1_with_hand.urdf  data\target\ur3\robot(ur3).urdf
 # C:\Users\30687\Desktop\ur3_robot_train_pico\ur3_robot_train_pico\data\target\ur3\robot(ur3).urdf
-robot_path = os.path.join('C:\\Users\\30687\\Desktop\\ur3_robot_train_pico\\ur3_robot_train_pico\data\\target\\ur3\\robot(ur3).urdf')
+# D:\2025\Roboteleop\Robotelop\configs
+robot_path = os.path.join('D:\\2025\\Roboteleop\\Robotelop\\data\\target\\ur3\\robot(ur3).urdf')
 class YumiEnv(gym.Env):
     """docstring for YumiEnv"""
     def __init__(self):

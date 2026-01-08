@@ -89,8 +89,12 @@ def load_and_visualize_h5_data(filename='data.h5'):
     # 打开h5文件
     with h5py.File(filename, 'r') as h5f:
         # 获取时间戳数据
-        timestamps = h5f['timestamp'][:]
-        num_frames = len(timestamps)
+        # 获取任一关节数据以确定帧数（取首个维度长度）
+        sample_joint_data = h5f[joint_names[0]][:]
+        num_frames = sample_joint_data.shape[0]  # 取首个维度长度为帧数
+        
+        # 生成从0开始的时间戳序列
+        timestamps = np.arange(num_frames)
         
         print(f"加载到 {num_frames} 帧数据")
         
@@ -119,7 +123,7 @@ def load_and_visualize_h5_data(filename='data.h5'):
             ax.set_xlabel('X')
             ax.set_ylabel('Y')
             ax.set_zlabel('Z')
-            ax.set_title(f'Body Tracking Data - Frame {frame_idx+1}/{num_frames} - Time: {timestamps[frame_idx]:.0f} ns')
+            ax.set_title(f'Body Tracking Data - Frame {frame_idx+1}/{num_frames} - Time: {timestamps[frame_idx]:.0f} ')
             
             # 收集当前帧所有关节的位置数据
             positions = []
@@ -149,8 +153,8 @@ def load_and_visualize_h5_data(filename='data.h5'):
             ax.scatter(xs, ys, zs, c='r', marker='o', s=50)
             
             # 为每个关节点添加标签
-            for i, (x, y, z) in enumerate(zip(xs, ys, zs)):
-                ax.text(x, y, z, f'{joint_names[i]}', fontsize=6)
+            # for i, (x, y, z) in enumerate(zip(xs, ys, zs)):
+            #     ax.text(x, y, z, f'{joint_names[i]}', fontsize=6)
             
             # 绘制骨骼连线（可选）
             draw_skeleton(ax, positions)
@@ -160,7 +164,7 @@ def load_and_visualize_h5_data(filename='data.h5'):
                 draw_coordinate_axes(ax, pos, quat, scale=0.1)
             # 刷新图形
             plt.draw()
-            plt.pause(0.5)  # 控制播放速度，可根据需要调整
+            plt.pause(0.003)  # 控制播放速度，可根据需要调整
             
             # 检查是否关闭了图形窗口
             if not plt.fignum_exists(fig.number):
@@ -196,7 +200,7 @@ def draw_skeleton(ax, positions):
 
 if __name__ == "__main__":
     try:
-        load_and_visualize_h5_data('test_1000.h5')
+        load_and_visualize_h5_data('operating.h5')
     except FileNotFoundError:
         print("未找到 data.h5 文件，请确保文件存在")
     except Exception as e:
