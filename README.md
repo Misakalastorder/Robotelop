@@ -6,7 +6,8 @@
 #### pico客户端使用说明
 https://github.com/XR-Robotics/XRoboToolkit-Unity-Client
 #### pico头显python接口
-https://github.com/XR-Robotics/XRoboToolkit-Teleop-Sample-Python
+https://github.com/XR-Robotics/XRoboToolkit-Teleop-Sample-Python  
+具体使用的库:https://github.com/XR-Robotics/XRoboToolkit-PC-Service-Pybind
 #### pico电脑端驱动
 https://github.com/XR-Robotics/XRoboToolkit-PC-Service
 ### visionpro采集
