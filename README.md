@@ -3,7 +3,36 @@
 # 实机视频
 ## 遥操作视频
 ### 任务1
+<video width="640" height="480" controls>
+  <source src="figure/online_task1.mp4" type="video/mp4">
+</video>
+
 ### 任务2
+<video width="640" height="480" controls>
+  <source src="figure/online_task2.mp4" type="video/mp4">
+</video>
+
+### 任务3
+<video width="640" height="480" controls>
+  <source src="figure/online_task3.mp4" type="video/mp4">
+</video>
+
+## 仿真视频
+### 睿尔曼机器臂
+<video width="640" height="480" controls>
+  <source src="figure/realman_outline.mp4" type="video/mp4">
+</video>
+
+### yumi
+<video width="640" height="480" controls>
+  <source src="figure/yumi_outline.mp4" type="video/mp4">
+</video>
+
+### yushu
+<video width="640" height="480" controls>
+  <source src="figure/yushu_outline.mp4" type="video/mp4">
+</video>
+
 # 相关参考
 ## 数据采集端
 ### Frankmocap
