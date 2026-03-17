@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotelop - 机器人重定向工作</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 10px;
+        }
+        h2, h3 {
+            color: #555;
+        }
+        .video-section {
+            margin: 20px 0;
+        }
+        .video-container {
+            margin: 15px 0;
+            text-align: center;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .reference-links {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .reference-links a {
+            display: block;
+            margin: 5px 0;
+            color: #007acc;
+            text-decoration: none;
+        }
+        .reference-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Robotelop - 机器人重定向工作</h1>
+        
+        <div class="video-section">
+            <h2>实机视频</h2>
+            
+            <h3>遥操作视频</h3>
+            <div class="video-container">
+                <h4>任务1</h4>
+                <video width="640" height="480" controls>
+                    <source src="figure/online_task1.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+            </div>
+            
+            <div class="video-container">
+                <h4>任务2</h4>
+                <video width="640" height="480" controls>
+                    <source src="figure/online_task2.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+            </div>
+            
+            <div class="video-container">
+                <h4>任务3</h4>
+                <video width="640" height="480" controls>
+                    <source src="figure/online_task3.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+            </div>
+        </div>
+        
+        <div class="video-section">
+            <h2>仿真视频</h2>
+            <div class="video-container">
+                <h3>睿尔曼机器臂</h3>
+                <video width="640" height="480" controls>
+                    <source src="figure/realman_outline.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+            </div>
+            
+            <div class="video-container">
+                <h3>yumi</h3>
+                <video width="640" height="480" controls>
+                    <source src="figure/yumi_outline.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+            </div>
+            
+            <div class="video-container">
+                <h3>yushu</h3>
+                <video width="640" height="480" controls>
+                    <source src="figure/yushu_outline.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+            </div>
+        </div>
+        
+        <div class="reference-links">
+            <h2>相关参考</h2>
+            <h3>数据采集端</h3>
+            <a href="https://github.com/facebookresearch/frankmocap">Frankmocap - 基于视觉的方法，比较旧但准确度算比较好</a>
+            
+            <h4>pico</h4>
+            <a href="https://github.com/XR-Robotics/XRoboToolkit-Unity-Client">pico客户端使用说明</a>
+            <a href="https://github.com/XR-Robotics/XRoboToolkit-Teleop-Sample-Python">pico头显python接口</a>
+            <a href="https://github.com/XR-Robotics/XRoboToolkit-PC-Service-Pybind">具体使用的库</a>
+            <a href="https://github.com/XR-Robotics/XRoboToolkit-PC-Service">pico电脑端驱动</a>
+            
+            <a href="https://github.com/Improbable-AI/VisionProTeleop">visionpro采集</a>
+            
+            <h3>重定向端</h3>
+            <a href="https://github.com/0aqz0/neural-retargeting">参考论文项目链接</a>
+            
+            <h3>机器人仿真驱动端</h3>
+            <a href="https://github.com/linkerbotai/linker_hand_python_sdk">灵心巧手</a>
+        </div>
+    </div>
+</body>
+</html>
